@@ -104,13 +104,13 @@ void loop() {
   MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
   cur_mem->execute(INSERT_SQL);
  }
-
-void updateTime(int zone, int dst) {
+ 
+ // function to updtate the time and commit it to the database. Takes in the 
+ // parameters of your current zone, and the dst.
+ void updateTime(int zone, int dst) {
   char INSERT_SQL[1024];
-  //configTime(zone, dst, "pool.ntp.org", "time.nist.gov");
   time_t now = time(nullptr);
   sprintf(INSERT_SQL, "INSERT INTO test_arduino.hello_arduino (message) VALUES (' " " %s " " , " "%s" "')", "Hey ddududude!", ctime(&now));
-  // TD  : PUT TIME AS ONE OF THE PARAMS OF THE INSERT, ON DB.
   Serial.printf("%s; time:%s", INSERT_SQL, ctime(&now));
   executeQuery(INSERT_SQL, conn);
  }
