@@ -85,6 +85,10 @@ void loop() {
    Serial.println ( WiFi.localIP() );
  }
 
+ // Function to connect to the database. Takes in the params of 
+ // DatabaseUser, Password for user, and the MYSQL_Connection object. 
+ // This will try to connect to the IP on the MySQL port 3306 and will
+ // print dots until then, as this is not a blocking function.
  void connectToDatabase(char* DatabaseUser, char* DatabasePassword, MySQL_Connection conn) {   
   Serial.println("DB - Connecting...");
    while (conn.connect(remote_ip, 3306, DatabaseUser, DatabasePassword) != true) {
@@ -93,6 +97,9 @@ void loop() {
    }
  }
 
+ // This function executes the query given to the function, the character 
+ // pointer as well as the MYSQL_Connection object. It creates a new MYSQL_Cursor. 
+ // It will then insert the code into the table through updateTime();
  void executeQuery(char* INSERT_SQL, MySQL_Connection conn) {
   MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
   cur_mem->execute(INSERT_SQL);
