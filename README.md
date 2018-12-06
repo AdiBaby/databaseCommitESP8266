@@ -1,8 +1,7 @@
 # databaseCommitESP8266
 
 
-This project is a simple framework to insert into a mysql table. I used all the connections on the same network, using one linux
-computer as the database, and my chip accessed it through a user I setup for it specifically. The way you do this is 
+This project is a simple framework to insert into a mysql table. I used all the connections on the same network, using one linux computer as the database, and my chip accessed it through a user I setup for it specifically. The way you do this is 
 
 GRANT ALL PRIVILEGES ON *.* TO 'user'@'ip_of_chip' IDENTIFIED BY 'your_password'
 
@@ -24,4 +23,6 @@ database and table to something different, change the INSERT_SQL line from test_
 
 This program also inserts the time. The time is used by the configTime() API. Another possible way to do this is to update the 
 time from mysql itself, but I was lazy and decided to just update it with the ESP because I wanted to save it as a String.
+
+
 
