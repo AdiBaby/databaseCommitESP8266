@@ -32,8 +32,12 @@ current was coming from when I called current on specific Pins, here are the res
  - Calling pin 4 will send current to D2. 
  - Calling pin 3 goes who knows where.
  - Calling pin 2 as OUTPUT will result in current from D4, but calling INPUT will short it (Story of my first ESP8266).
+ 
+Also, the PIR motion sensor I am using (HC - SR501) only takes 5V on VCC. The ESP only gives at max 3.3V. DONT PANIC!
+A quick fix is to get another old arduino board, and connect the 5V from there to your PIR, and the GND on the 
+old arduino to the ESP. This worked for me.
 
-You're welcome. Good Luck with your project. 
+Good Luck with your project. 
 
 
 
