@@ -24,5 +24,16 @@ database and table to something different, change the INSERT_SQL line from test_
 This program also inserts the time. The time is used by the configTime() API. Another possible way to do this is to update the 
 time from mysql itself, but I was lazy and decided to just update it with the ESP because I wanted to save it as a String.
 
+UPDATE 12-6-18 : 
+Implemented a motion sensor in the circuit, so whenever the PIR sensor senses motion, it will automatically update the data 
+to the database. NOTE - The pinout on the ESP8266 (In my case) was screwed up, I used a multimeter to measure where the 
+current was coming from when I called current on specific Pins, here are the results : 
+ - Calling pin 5 will send current to D1.
+ - Calling pin 4 will send current to D2. 
+ - Calling pin 3 goes who knows where.
+ - Calling pin 2 as OUTPUT will result in current from D4, but calling INPUT will short it (Story of my first ESP8266).
+
+You're welcome. Good Luck with your project. 
+
 
 
