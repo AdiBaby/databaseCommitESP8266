@@ -1,4 +1,4 @@
-# databaseCommitESP8266
+# MotionSensordatabaseCommitESP8266
 
 
 This project is a simple framework to insert into a mysql table. I used all the connections on the same network, using one linux computer as the database, and my chip accessed it through a user I setup for it specifically. The way you do this is 
