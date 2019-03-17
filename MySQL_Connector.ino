@@ -1,6 +1,5 @@
 /*
  * (C) Aditya Prerepa 12-6-18
- * THE SOLE PURPOSE OF THIS PROJECT IS GOOGLE CODE IN
  */
 
 // output 5 goes to D1.
